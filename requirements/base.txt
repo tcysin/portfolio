@@ -1,4 +1,4 @@
-# Django
+# Django core
 Django==3.2
 
 # Related functionality
