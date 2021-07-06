@@ -1,0 +1,5 @@
+# Django
+Django==3.2
+
+# Related functionality
+argon2-cffi==20.1.0  # better 
