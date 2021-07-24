@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- extra tags -->
+    {% block tags %}{% endblock %}
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block extra_css %}
+    {% endblock %}
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/paw-64x64.png' %}">
+
+    <!-- title -->
+    <title>{% block title %}Title{% endblock %}</title>
+</head>
+
+<body>
+
+    <!-- main -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <!-- TODO - make this one pretty -->
+        <hr>
+
+        <nav>
+            {% block navbar %}
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="https://#">Source code</a></li>
+                <li><a href="{% url 'privacy-policy' %}">Privacy policy</a></li>
+            </ul>
+            {% endblock %}
+        </nav>
+
+        {% block license %}
+        <p xmlns:cc="http://creativecommons.org/ns#">Unless noted otherwise, the content on this
+            site by
+            <span property="cc:attributionName">Touzik Gaffkovski</span> is licensed under
+            <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer">
+                CC BY 4.0</a>
+        </p>
+        {% endblock %}
+
+        {% block attribution %}
+        <p>Icons by <a href="https://freeicons.io/profile/714" target="_blank">Raj Dev</a> on <a
+                href="https://freeicons.io" target="_blank">freeicons.io</a></p>
+        {% endblock %}
+
+    </footer>
+</body>
+
+</html>

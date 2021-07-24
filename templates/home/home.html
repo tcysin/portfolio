@@ -1,36 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% load static %}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <!-- title -->
-    <title>Title</title>
-</head>
+{% block tags %}
+<!-- extra tags -->
+<meta name="author" content="Touzik Gaffkovski">
+<meta name="description"
+    content="Personal website of Touzik Gaffkovski - the dog, the myth, the legend.">
+{% endblock %}
 
-<body>
+{% block title %}
+Welcome | Touzik
+{% endblock %}
 
-    <!-- main -->
-    <main>
-        <h1>Hello, i am a test page!</h1>
-    </main>
+{% block content %}
+<h1>Touzik Gaffkovski</h1>
 
-    <!-- footer -->
-    <footer>
-        <!-- TODO - make this one pretty -->
-        <hr>
+<figure>
+    <picture>
+        <source type="image/webp" srcset="
+            {% static 'images/home/touzik2-360x270.webp' %} 360w,
+            {% static 'images/home/touzik2-440x330.webp' %} 440w,
+            {% static 'images/home/touzik2-640x480.webp' %} 640w" sizes="
+                        (max-width: 360px) 360px,
+                        (max-width: 440px) 440px,
+                        640px">
+        <source type="image/jpeg" srcset="
+            {% static 'images/home/touzik2-360x270.jpeg' %} 360w,
+            {% static 'images/home/touzik2-440x330.jpeg' %} 440w,
+            {% static 'images/home/touzik2-640x480.jpeg' %} 640w" sizes="
+                        (max-width: 360px) 360px,
+                        (max-width: 440px) 440px,
+                        640px">
+        <img src="{% static 'images/home/touzik2-640x480.jpeg' %}"
+            alt="Black, wooly dog (tibetan terrier) with a white patch of hair on the chest">
+    </picture>
 
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="https://#">Source code</a></li>
-                <li><a href="#">Privacy policy</a></li>
-            </ul>
-        </nav>
+    <figcaption>Russia, <time datetime="2021-03">spring 2021</time></figcaption>
+</figure>
 
-    </footer>
-</body>
+<section>
+    <h2>Welcome!</h2>
+    <p>My name is <strong>Touzik</strong>, and I am a dog &#x1F436;.</p>
+    <p>Let&apos;s get to know each other! See the <a href="#gallery">gallery</a> for my bio
+        and cute photos.</p>
+</section>
 
-</html>
+<section>
+    <h2>Work</h2>
+    <p>Tasty snacks are not free (ridiculous, I know), so I work as a <em>Data
+            Scientist</em>. Check out on-line <a href="#segmentation">object detection
+            demo</a> to see what I&apos;m doing at the moment.</p>
+    <p>Interested in my background? <a href="{% static 'misc/cv-touzik.pdf' %}"
+            download="cv-touzik.pdf" target="_blank"> Download the CV (PDF, 40KB)</a> to see
+        more.</p>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <a href="#">Contact me</a> if you want to woof at the postman together &#x1F60A;
+</section>
+
+<section>
+    <h2>About this website</h2>
+    <p>Confused? Read on <a href="#about">what this website is about</a>.</p>
+</section>
+{% endblock %}
