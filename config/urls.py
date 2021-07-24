@@ -14,11 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf import settings
-from django.urls import path
+from django.urls import include, path
 from django.views import defaults as default_views
 
-urlpatterns = [
-]
+urlpatterns = []
 
 
 if settings.DEBUG:
@@ -42,3 +41,9 @@ if settings.DEBUG:
         ),
         path("500/", default_views.server_error),
     ]
+
+    # Debug toolbar
+    if "debug_toolbar" in settings.INSTALLED_APPS:
+        import debug_toolbar
+
+        urlpatterns += [path("__debug__/", include(debug_toolbar.urls))]
