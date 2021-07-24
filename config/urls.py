@@ -17,7 +17,9 @@ from django.conf import settings
 from django.urls import include, path
 from django.views import defaults as default_views
 
-urlpatterns = []
+urlpatterns = [
+    path("", include("home.urls")),
+]
 
 
 if settings.DEBUG:
