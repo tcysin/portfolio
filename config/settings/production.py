@@ -12,6 +12,8 @@ ALLOWED_HOSTS = get_secret("ALLOWED_HOSTS")  # noqa F405
 
 # TEMPLATES
 # ------------------------------------------------------------------------------
+# fix templates.E001 error
+TEMPLATES[-1]["APP_DIRS"] = False  # noqa F405
 # https://docs.djangoproject.com/en/dev/ref/settings/#templates
 TEMPLATES[-1]["OPTIONS"]["loaders"] = [  # type: ignore[index] # noqa F405
     (
@@ -22,6 +24,7 @@ TEMPLATES[-1]["OPTIONS"]["loaders"] = [  # type: ignore[index] # noqa F405
         ],
     )
 ]
+
 
 # CACHES
 # -----------------------------------------------------------------------------
