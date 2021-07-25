@@ -16,7 +16,6 @@ from django.core.exceptions import ImproperlyConfigured
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-
 # SECRETS
 # -----------------------------------------------------------------------------
 # see Two Scoops of Django 3.x, chapter 5.4.2
@@ -53,7 +52,6 @@ USE_L10N = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#use-tz
 USE_TZ = True
 
-
 # DATABASE
 # -----------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -64,14 +62,12 @@ DATABASES = {
     }
 }
 
-
 # URLS
 # -----------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#root-urlconf
 ROOT_URLCONF = "config.urls"
 # https://docs.djangoproject.com/en/dev/ref/settings/#wsgi-application
 WSGI_APPLICATION = "config.wsgi.application"
-
 
 # APPS
 # -----------------------------------------------------------------------------
@@ -85,7 +81,6 @@ LOCAL_APPS = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
-
 # MIGRATIONS
 # -----------------------------------------------------------------------------
 
@@ -95,7 +90,6 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 # PASSWORDS
 # -----------------------------------------------------------------------------
 
-
 # MIDDLEWARE
 # -----------------------------------------------------------------------------
 MIDDLEWARE = [
@@ -104,7 +98,6 @@ MIDDLEWARE = [
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-
 
 # STATIC
 # -----------------------------------------------------------------------------
@@ -120,10 +113,8 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 
-
 # MEDIA
 # -----------------------------------------------------------------------------
-
 
 # TEMPLATES
 # -----------------------------------------------------------------------------
@@ -145,18 +136,8 @@ TEMPLATES = [
 # FIXTURES
 # -----------------------------------------------------------------------------
 
-
 # SECURITY
 # -----------------------------------------------------------------------------
-# https://docs.djangoproject.com/en/dev/ref/settings/#session-cookie-httponly
-SESSION_COOKIE_HTTPONLY = True
-# https://docs.djangoproject.com/en/dev/ref/settings/#csrf-cookie-httponly
-CSRF_COOKIE_HTTPONLY = True
-# https://docs.djangoproject.com/en/dev/ref/settings/#secure-browser-xss-filter
-SECURE_BROWSER_XSS_FILTER = True
-# https://docs.djangoproject.com/en/dev/ref/settings/#x-frame-options
-X_FRAME_OPTIONS = "DENY"
-
 
 # EMAIL
 # -----------------------------------------------------------------------------
@@ -171,8 +152,6 @@ X_FRAME_OPTIONS = "DENY"
 # LOGGING
 # -----------------------------------------------------------------------------
 
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
