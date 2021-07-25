@@ -8,7 +8,7 @@ DEBUG = False
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = get_secret("SECRET_KEY")  # noqa F405
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = get_secret("DJANGO_ALLOWED_HOSTS")  # noqa F405
+ALLOWED_HOSTS = get_secret("ALLOWED_HOSTS")  # noqa F405
 
 # TEMPLATES
 # ------------------------------------------------------------------------------

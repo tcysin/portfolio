@@ -29,7 +29,7 @@ def get_secret(variable, secrets=SECRETS):
     try:
         return secrets[variable]
     except KeyError:
-        error_msg = "Set the {0} environment variable".format(variable)
+        error_msg = "Set the {0} key in SECRETS file.".format(variable)
         raise ImproperlyConfigured(error_msg)
 
 
