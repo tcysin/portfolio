@@ -56,6 +56,7 @@ coverage.xml
 
 # Django stuff
 staticfiles/
+*_dump.txt
 
 # secret sauce
 secrets.json
