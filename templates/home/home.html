@@ -17,24 +17,8 @@ Welcome | Touzik
 <h1>Touzik Gaffkovski</h1>
 
 <figure>
-    <picture>
-        <source type="image/webp" srcset="
-            {% static 'images/home/touzik2-360x270.webp' %} 360w,
-            {% static 'images/home/touzik2-440x330.webp' %} 440w,
-            {% static 'images/home/touzik2-640x480.webp' %} 640w" sizes="
-                        (max-width: 360px) 360px,
-                        (max-width: 440px) 440px,
-                        640px">
-        <source type="image/jpeg" srcset="
-            {% static 'images/home/touzik2-360x270.jpeg' %} 360w,
-            {% static 'images/home/touzik2-440x330.jpeg' %} 440w,
-            {% static 'images/home/touzik2-640x480.jpeg' %} 640w" sizes="
-                        (max-width: 360px) 360px,
-                        (max-width: 440px) 440px,
-                        640px">
-        <img src="{% static 'images/home/touzik2-640x480.jpeg' %}"
-            alt="Black, wooly dog (tibetan terrier) with a white patch of hair on the chest">
-    </picture>
+    <img src="{% static 'images/home/touzik2-640x480.webp' %}"
+        alt="Black, wooly dog (tibetan terrier) with a white patch of hair on the chest">
 
     <figcaption>Russia, <time datetime="2021-03">spring 2021</time></figcaption>
 </figure>
@@ -58,7 +42,8 @@ Welcome | Touzik
 
 <section>
     <h2>Contact</h2>
-    <a href="{% url 'contact' %}">Contact me</a> if you want to woof at the postman together &#x1F60A;
+    <a href="{% url 'contact' %}">Contact me</a> if you want to woof at the postman together
+    &#x1F60A;
 </section>
 
 <section>
