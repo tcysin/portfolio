@@ -59,7 +59,7 @@ staticfiles/
 *_dump.txt
 
 # secret sauce
-secrets.json
+secrets*.json
 .env
 
 # other content with big file size

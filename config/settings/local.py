@@ -1,12 +1,18 @@
 from .base import *  # noqa F403
 
+# LOCAL SECRETS
+# -----------------------------------------------------------------------------
+# see Two Scoops of Django 3.x, chapter 5.4.2
+with open(BASE_DIR / "secrets_local.json") as f:    # noqa F403
+    SECRETS = json.loads(f.read())    # noqa F403
+
 # LOCAL DEV
 # -----------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#debug
 DEBUG = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = get_secret("SECRET_KEY")  # noqa F405
+SECRET_KEY = get_secret("SECRET_KEY", SECRETS)  # noqa F405
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1"]
 
