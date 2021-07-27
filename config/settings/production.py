@@ -44,4 +44,10 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
 # EMAIL
 # -----------------------------------------------------------------------------
-# TODO
+MY_PERSONAL_EMAIL = get_secret('MY_PERSONAL_EMAIL')  # noqa F405
+# https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
+EMAIL_BACKEND = get_secret("EMAIL_BACKEND")  # noqa F405
+# https://docs.djangoproject.com/en/dev/ref/settings/#email-timeout
+EMAIL_TIMEOUT = 5
+# https://docs.djangoproject.com/en/3.2/ref/settings/#email-use-tls
+EMAIL_USE_TLS = True

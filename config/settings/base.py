@@ -141,10 +141,6 @@ TEMPLATES = [
 
 # EMAIL
 # -----------------------------------------------------------------------------
-# https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
-# EMAIL_BACKEND = get_secret("EMAIL_BACKEND")
-# https://docs.djangoproject.com/en/dev/ref/settings/#email-timeout
-# EMAIL_TIMEOUT = 5
 
 # ADMIN
 # -----------------------------------------------------------------------------
