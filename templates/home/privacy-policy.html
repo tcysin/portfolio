@@ -12,14 +12,14 @@ Privacy policy | Touzik
     recorded by chicken.pythonanywhere.com and how i use it.</p>
 
 <p>If you have additional questions or require more information about the Privacy Policy,
-    do not hesitate to <a href="#contact">contact me</a>.</p>
+    do not hesitate to <a href="{% url 'contact' %}">contact me</a>.</p>
 
 <p>This Privacy Policy applies only to online activities and is valid for visitors of
     the website with regards to the information shared and/or collected on
     chicken.pythonanywhere.com. This policy is not applicable to any information collected
     offline or via channels other than this website. The Privacy Policy was created with
     the help of the
-    <a href="https://www.privacypolicyonline.com/privacy-policy-generator/">
+    <a href="https://www.privacypolicyonline.com/privacy-policy-generator/" target="_blank">
         Online Generator of Privacy Policy</a>.
 </p>
 
@@ -37,8 +37,8 @@ Privacy policy | Touzik
     hosting services' analytics.</p>
 
 <p>The information collected by log files include <em>internet
-    protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time
-    stamp, referring/exit pages, and possibly the number of clicks</em>. These are not linked
+        protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time
+        stamp, referring/exit pages, and possibly the number of clicks</em>. These are not linked
     to any information that is personally identifiable.</p>
 
 <p>The purpose of the information is
@@ -74,7 +74,7 @@ Privacy policy | Touzik
 
 <ul>
     <li>When you submit a form, i would ask for your contact information, including items
-        such as <strong>name</strong> and <strong>email address</strong> in order to reply.
+        such as <strong>email address</strong> in order to reply.
     </li>
 </ul>
 
@@ -85,7 +85,7 @@ Privacy policy | Touzik
 
 <ul>
     <li>Provide, operate, and maintain the website.</li>
-    <li>Reply to your form posts using provided contact details (email, name).</li>
+    <li>Reply to your form posts using provided contact details (email).</li>
 </ul>
 
 
@@ -106,7 +106,7 @@ Privacy policy | Touzik
 </ul>
 <p>If you make a request, i have one month to respond to you. If you would like to exercise
     any
-    of these rights, please <a href="#contact">contact me</a>.</p>
+    of these rights, please <a href="{% url 'contact' %}">contact me</a>.</p>
 
 
 <h2>GDPR Data Protection Rights</h2>
@@ -136,7 +136,7 @@ Privacy policy | Touzik
 
 <p>If you make a request, i have one month to respond to you. If you would like to exercise
     any of these
-    rights, please <a href="#contact">contact me</a>.</p>
+    rights, please <a href="{% url 'contact' %}">contact me</a>.</p>
 
 
 <h2>Children's Information</h2>
@@ -144,6 +144,6 @@ Privacy policy | Touzik
 <p>chicken.pythonanywhere.com does not knowingly collect any Personal Identifiable
     Information
     from children under the age of 13. If you think that your child provided this kind of
-    information on the website, <a href="#contact">contact me</a> immediately in order
+    information on the website, <a href="{% url 'contact' %}">contact me</a> immediately in order
     to remove it from the records.</p>
 {% endblock %}
