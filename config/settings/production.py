@@ -31,6 +31,9 @@ TEMPLATES[-1]["OPTIONS"]["loaders"] = [  # type: ignore[index] # noqa F405
 
 # SECURITY
 # -----------------------------------------------------------------------------
+# https://docs.djangoproject.com/en/3.2/ref/settings/#std:setting-SECURE_SSL_REDIRECT
+# PAW does this redirect automatically
+SECURE_SSL_REDIRECT = True
 # https://docs.djangoproject.com/en/3.2/ref/settings/#session-cookie-secure
 SESSION_COOKIE_SECURE = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#csrf-cookie-secure
