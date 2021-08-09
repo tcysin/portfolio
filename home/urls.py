@@ -19,4 +19,9 @@ urlpatterns = [
         ContactView.as_view(),
         name="contact",
     ),
+    path(
+        "success/",
+        TemplateView.as_view(template_name="home/success.html"),
+        name="success",
+    ),
 ]

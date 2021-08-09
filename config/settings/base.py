@@ -77,6 +77,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = []
 LOCAL_APPS = [
     # Your stuff: custom apps go here
+    "home.apps.HomeConfig"
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -141,10 +142,6 @@ TEMPLATES = [
 
 # EMAIL
 # -----------------------------------------------------------------------------
-# https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
-# EMAIL_BACKEND = get_secret("EMAIL_BACKEND")
-# https://docs.djangoproject.com/en/dev/ref/settings/#email-timeout
-# EMAIL_TIMEOUT = 5
 
 # ADMIN
 # -----------------------------------------------------------------------------
