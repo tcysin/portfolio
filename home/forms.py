@@ -19,6 +19,7 @@ class ContactForm(forms.Form):
         # TODO clean subject field?
         subject = self.cleaned_data.get("subject", "Email from personal website")
         message = self.cleaned_data.get("message")
+        message = f'From: {sender}\n\n' + message  # workaround
         me = settings.MY_PERSONAL_EMAIL
 
         send_mail(subject, message, sender, [me])
