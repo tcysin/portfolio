@@ -11,5 +11,6 @@ class ContactView(FormView):
 
     def form_valid(self, form):
         """If the form is valid, send email and redirect to success url."""
-        form.send_email()
+        # TODO enable when you get paid membership on PAW
+        # form.send_email()
         return FormView.form_valid(self, form)
