@@ -49,6 +49,9 @@ coverage.xml
 
 ### Project stuff
 
+# milestones, lists of thing to do, etc.
+todos.md
+
 # ignore sqlite databases
 *.db
 *.sqlite

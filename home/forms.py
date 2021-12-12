@@ -8,7 +8,7 @@ class ContactForm(forms.Form):
     subject = forms.CharField(required=False, max_length=100, label_suffix="")
     message = forms.CharField(
         max_length=3000,
-        widget=forms.Textarea,
+        widget=forms.Textarea(),  # TODO attrs={'min-height': '7'} ?
         label_suffix="",
     )
 
