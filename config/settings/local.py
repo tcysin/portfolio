@@ -1,10 +1,5 @@
 from .base import *  # noqa F403
 
-# LOCAL SECRETS
-# -----------------------------------------------------------------------------
-# see Two Scoops of Django 3.x, chapter 5.4.2
-with open(BASE_DIR / "secrets_local.json") as f:    # noqa F403
-    SECRETS = json.loads(f.read())    # noqa F403
 
 # LOCAL DEV
 # -----------------------------------------------------------------------------
@@ -32,7 +27,7 @@ CACHES = {
 # -----------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-MY_PERSONAL_EMAIL = 'my.personal.email@mail.com'
+MY_PERSONAL_EMAIL = "my.personal.email@mail.com"
 
 
 # django-debug-toolbar

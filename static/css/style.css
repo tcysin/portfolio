@@ -83,10 +83,12 @@ button {
     box-sizing: border-box;
 }
 
+/* TODO font size? */
 label {
     font-size: 1.5rem;
 }
 
+/* TODO font size */
 input[type="email"],
 input[type="text"],
 textarea,
@@ -97,6 +99,7 @@ button {
 }
 
 textarea {
+    min-height: 15rem;
     overflow: auto;
     resize: vertical;
 }
