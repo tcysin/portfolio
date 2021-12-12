@@ -21,6 +21,7 @@ from django.views import defaults as default_views
 
 urlpatterns = [
     path("", include("home.urls")),
+    path("duplicate-detection/", include("duplicates.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
