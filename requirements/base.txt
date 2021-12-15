@@ -1,2 +1,5 @@
 # Django core
 Django==3.2
+
+# Image processing
+Pillow==8.4.0

@@ -1,6 +1,7 @@
 from django.urls import path
-from django.views.generic import TemplateView
+
+from .views import ImageUploadView
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="duplicates/duplicates.html")),
+    path("", ImageUploadView.as_view()),
 ]

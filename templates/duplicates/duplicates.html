@@ -10,4 +10,12 @@ Detecting duplicated images | Touzik
 
 <p>This is a stub page for duplicated images detection.</p>
 
+<form enctype="multipart/form-data" method="post" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>
+        <button type="submit">Find Duplicates</button>
+    </p>
+</form>
+
 {% endblock %}
