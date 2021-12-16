@@ -5,8 +5,7 @@
 {% block tags %}
 <!-- extra tags -->
 <meta name="author" content="Touzik Gaffkovski">
-<meta name="description"
-    content="Personal website of Touzik Gaffkovski - the dog, the myth, the legend.">
+<meta name="description" content="Personal website of Touzik Gaffkovski - the dog, the myth, the legend.">
 {% endblock %}
 
 {% block title %}
@@ -33,10 +32,10 @@ Welcome | Touzik
 <section>
     <h2>Work</h2>
     <p>Tasty snacks are not free (ridiculous, I know), so I work as a <em>Data
-            Scientist</em>. Check out on-line <a href="#segmentation">object detection
+            Scientist</em>. Check out on-line <a href="{% url 'duplicate-detection' %}">image duplicate detection
             demo</a> to see what I&apos;m doing at the moment.</p>
-    <p>Interested in my background? <a href="{% static 'misc/cv-touzik.pdf' %}"
-            download="cv-touzik.pdf" target="_blank"> Download the CV (PDF, 40KB)</a> to see
+    <p>Interested in my background? <a href="{% static 'misc/cv-touzik.pdf' %}" download="cv-touzik.pdf"
+            target="_blank"> Download the CV (PDF, 40KB)</a> to see
         more.</p>
 </section>
 
