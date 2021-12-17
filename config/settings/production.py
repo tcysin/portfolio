@@ -44,6 +44,9 @@ CSRF_COOKIE_SECURE = True
 SECURE_HSTS_SECONDS = 60
 # https://docs.djangoproject.com/en/dev/ref/settings/#secure-hsts-include-subdomains
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# CUSTOM
+# Max allowed size (bytes) of an uploaded image file
+IMAGE_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024 * 10  # 10Mb
 
 # EMAIL
 # -----------------------------------------------------------------------------
@@ -51,7 +54,6 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"  # noqa F405
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-timeout
 EMAIL_TIMEOUT = 5
-
 # https://docs.djangoproject.com/en/3.2/ref/settings/#email-host
 EMAIL_HOST = get_secret("EMAIL_HOST")  # noqa F405
 # https://docs.djangoproject.com/en/3.2/ref/settings/#email-host-user
@@ -62,4 +64,5 @@ EMAIL_HOST_PASSWORD = get_secret("EMAIL_HOST_PASSWORD")  # noqa F405
 EMAIL_PORT = get_secret("EMAIL_PORT")  # noqa F405
 # https://docs.djangoproject.com/en/3.2/ref/settings/#email-use-tls
 EMAIL_USE_TLS = True
+# CUSTOM
 MY_PERSONAL_EMAIL = get_secret("MY_PERSONAL_EMAIL")  # noqa F405
