@@ -2,4 +2,9 @@ from django import forms
 
 
 class ImageUploadForm(forms.Form):
-    image = forms.ImageField(label_suffix="")
+    images = forms.ImageField(
+        label_suffix="",
+        widget=forms.ClearableFileInput(
+            attrs={"multiple": True},  # TODO limit accepted types?
+        ),
+    )
