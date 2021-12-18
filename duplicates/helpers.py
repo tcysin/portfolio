@@ -9,7 +9,7 @@ from typing import Generator, Sequence, Union
 from django.core.files.uploadedfile import UploadedFile
 from PIL import Image, UnidentifiedImageError
 
-# see `load_images` comments for details
+# see `open_images` comments for details
 warnings.simplefilter("error", Image.DecompressionBombWarning)
 
 
@@ -50,8 +50,8 @@ def open_images(
     file's `name` attribute.
 
     Args:
-        `uploaded_files`: a list of `UploadedFile` objects.
-        `maxsize`: maximum allowed size (in bytes) of a file.
+        uploaded_files: a list of `UploadedFile` objects.
+        maxsize: maximum allowed size (in bytes) of a file.
             Defaults to 10Mb.
             TODO best default maxsize?
     """
