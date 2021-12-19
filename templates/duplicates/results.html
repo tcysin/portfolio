@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+Detection results | Touzik
+{% endblock %}
+
+{% block content %}
+<h1>Detection results</h1>
+
+{% if result %}
+<p>Below is a list of image filenames that we consider <em>duplicates</em>.</p>
+<p>
+    <samp>
+        {{ result|linebreaksbr }}
+    </samp>
+</p>
+{% else %}
+<p>We have not found any duplicated imaged (or we cannot open provided files as images).</p>
+{% endif %}
+
+<p>Would you like to <a href="{% url 'duplicate-detection' %}">try again</a>?</p>
+
+{% endblock content %}

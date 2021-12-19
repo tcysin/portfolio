@@ -1,7 +1,8 @@
 from django.urls import path
 
-from .views import ImageUploadView
+from . import views
 
 urlpatterns = [
-    path("", ImageUploadView.as_view(), name='duplicate-detection'),
+    path("", views.upload, name="duplicate-detection"),
+    path("results/", views.detect, name="results"),
 ]

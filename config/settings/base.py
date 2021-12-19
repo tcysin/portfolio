@@ -129,15 +129,11 @@ TEMPLATES = [
     },
 ]
 
-
 # FIXTURES
 # -----------------------------------------------------------------------------
 
 # SECURITY
 # -----------------------------------------------------------------------------
-# CUSTOM
-# Max allowed size (bytes) of an uploaded image file
-IMAGE_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024 * 10  # 10Mb
 
 # EMAIL
 # -----------------------------------------------------------------------------
@@ -148,6 +144,15 @@ IMAGE_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024 * 10  # 10Mb
 # LOGGING
 # -----------------------------------------------------------------------------
 
+# MISC
+# -----------------------------------------------------------------------------
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# CUSTOM
+# -----------------------------------------------------------------------------
+# Max allowed size (bytes) of an uploaded image file
+IMAGE_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024 * 10  # 10Mb
+# Distance threshold for duplicated image detection
+THRESHOLD = 0.16  # cutoff (scaled) Hamming distance between dHashes

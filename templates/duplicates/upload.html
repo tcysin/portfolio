@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 
-
 {% block title %}
 Detecting duplicated images | Touzik
 {% endblock %}
@@ -8,9 +7,9 @@ Detecting duplicated images | Touzik
 {% block content %}
 <h1>Detecting duplicated images</h1>
 
-<p>This is a stub page for duplicated images detection.</p>
+<p>This is a stub page for file upload for duplicated images detection.</p>
 
-<form enctype="multipart/form-data" method="post" action="">
+<form enctype="multipart/form-data" method="post" action="{% url 'results' %}">
     {% csrf_token %}
     {{ form.as_p }}
     <p>

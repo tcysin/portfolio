@@ -101,7 +101,9 @@ def duplicates_dict(X: np.ndarray) -> Dict[int, List[int]]:
     return dict(dict_dups)  # freeze final dict
 
 
-def find_duplicates(images: Iterable[Image.Image], threshold: float = 0.16):
+def find_duplicates(
+    images: Iterable[Image.Image], threshold: float = 0.16
+) -> Dict[str, List[str]]:
     """
     Find duplicated or near-duplicated images.
 
