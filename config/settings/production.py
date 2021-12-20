@@ -62,4 +62,7 @@ EMAIL_HOST_PASSWORD = get_secret("EMAIL_HOST_PASSWORD")  # noqa F405
 EMAIL_PORT = get_secret("EMAIL_PORT")  # noqa F405
 # https://docs.djangoproject.com/en/3.2/ref/settings/#email-use-tls
 EMAIL_USE_TLS = True
+
+# CUSTOM
+# -----------------------------------------------------------------------------
 MY_PERSONAL_EMAIL = get_secret("MY_PERSONAL_EMAIL")  # noqa F405
