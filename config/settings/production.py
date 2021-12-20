@@ -27,7 +27,13 @@ TEMPLATES[-1]["OPTIONS"]["loaders"] = [  # type: ignore[index] # noqa F405
 
 # CACHES
 # -----------------------------------------------------------------------------
-# TODO
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "LOCATION": "",
+        "TIMEOUT": 60 * 60 * 4,  # four hours
+    }
+}
 
 # SECURITY
 # -----------------------------------------------------------------------------
