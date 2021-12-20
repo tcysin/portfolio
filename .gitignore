@@ -51,6 +51,7 @@ coverage.xml
 
 # milestones, lists of thing to do, etc.
 todos.md
+content.md
 
 # ignore sqlite databases
 *.db
