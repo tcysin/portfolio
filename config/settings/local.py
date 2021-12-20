@@ -24,7 +24,6 @@ CACHES = {
 # -----------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-MY_PERSONAL_EMAIL = "my.personal.email@mail.com"
 
 # django-debug-toolbar
 # -----------------------------------------------------------------------------
