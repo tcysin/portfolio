@@ -1,3 +1,4 @@
+import time
 from itertools import chain
 from operator import attrgetter
 
@@ -30,6 +31,7 @@ def detect(request):
     """
 
     if request.method == "POST":
+        start = time.thread_time()
         # in-built checks for multiple image files are useless,
         # so we skip form instantiation and validation
 
@@ -61,7 +63,12 @@ def detect(request):
         # TODO option to save results as .zip archive
 
         return render(
-            request, "duplicates/results.html", {"result": "\n".join(filenames)}
+            request,
+            "duplicates/results.html",
+            context={
+                "result": "\n".join(filenames),
+                "elapsed": round(time.thread_time() - start, 3),
+            },
         )
 
     # if GET (or any other method) send user back to upload page

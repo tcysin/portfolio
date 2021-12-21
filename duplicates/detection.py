@@ -30,9 +30,15 @@ def dHash(image: Image.Image):
         boolean 1-D ndarray of size 64.
     """
 
+    # convert the image to grayscale and resize the grayscale image,
+    # adding a single column (width) so we can compute the horizontal
+    # gradient
     gray = image.convert("L")
     resized = gray.resize((9, 8), resample=Image.BOX)
     pixels = np.asarray(resized)
+
+    # compute the (relative) horizontal gradient between adjacent
+    # column pixels
     diff = pixels[:, :-1] < pixels[:, 1:]
 
     return np.ravel(diff)
@@ -92,9 +98,13 @@ def duplicates_dict(X: np.ndarray) -> Dict[int, List[int]]:
     n = len(X)
 
     for row in range(n - 1):  # skip last row
-        for col in range(row + 1, n):  # start one off-diagonal
 
-            if X[row, col] == True and row not in dups:  # noqa E712
+        if row in dups:
+            continue
+
+        for col in range(row + 1, n):  # start one past diagonal
+
+            if X[row, col] == True:  # noqa E712
                 dict_dups[row].append(col)
                 dups.add(col)  # mark j as a duplicate
 

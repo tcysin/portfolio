@@ -18,6 +18,8 @@ Detection results | Touzik
 <p>We have not found any duplicated imaged (or we cannot open provided files as images).</p>
 {% endif %}
 
+<p>Finished in {{ elapsed }} seconds.</p>
+
 <p>Would you like to <a href="{% url 'duplicate-detection' %}">try again</a>?</p>
 
 {% endblock content %}

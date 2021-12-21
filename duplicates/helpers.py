@@ -53,7 +53,6 @@ def open_images(
         uploaded_files: a list of `UploadedFile` objects.
         maxsize: maximum allowed size (in bytes) of a file.
             Defaults to 10Mb.
-            TODO best default maxsize?
     """
 
     # TODO better name for this function?

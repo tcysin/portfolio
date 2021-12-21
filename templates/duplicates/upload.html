@@ -5,9 +5,9 @@ Detecting duplicated images | Touzik
 {% endblock %}
 
 {% block content %}
-<h1>Detecting duplicated images</h1>
+<h1>Find duplicated images</h1>
 
-<p>This is a stub page for file upload for duplicated images detection.</p>
+<p>You can upload some images, and we will try to find <em>duplicates</em> among them.</p>
 
 <form enctype="multipart/form-data" method="post" action="{% url 'results' %}">
     {% csrf_token %}
