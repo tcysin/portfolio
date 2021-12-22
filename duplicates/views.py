@@ -38,22 +38,18 @@ def detect(request):
         # for more info about uploading multiple files, see
         # https://docs.djangoproject.com/en/3.2/topics/http/file-uploads/#uploading-multiple-files
         uploaded_files = request.FILES.getlist("images")  # may be empty
+        uploaded_files = uploaded_files[: settings.FILE_UPLOAD_MAX_COUNT]
         uploaded_files = sorted(uploaded_files, key=attrgetter("name"))
-        # TODO what to do if uploaded list is empty?
 
-        # TODO validate uploaded files manually
-        # for discussion why validation on multiple files is not run automatically, see
-        # https://stackoverflow.com/a/46409022 and https://github.com/django/django/pull/9011
+        # TODO what to do if uploaded list is empty?
         # TODO some potential image files might be corrupted / not images at all
         # TODO security
-        # TODO make sure there is at least two images
         # TODO tell user about this stuff
 
         # safely open uploaded files as PIL Images
-        gen = open_images(uploaded_files, maxsize=settings.IMAGE_UPLOAD_MAX_MEMORY_SIZE)
+        gen = open_images(uploaded_files, max_size=settings.FILE_UPLOAD_MAX_MEMORY_SIZE)
 
         # find duplicated images
-        # TODO log time
         dups_dict = find_duplicates(gen, threshold=settings.THRESHOLD)
         filenames = sorted(
             set(filename for filename in chain.from_iterable(dups_dict.values()))

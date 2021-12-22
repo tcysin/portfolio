@@ -71,5 +71,3 @@ EMAIL_USE_TLS = True
 # CUSTOM
 # -----------------------------------------------------------------------------
 MY_PERSONAL_EMAIL = get_secret("MY_PERSONAL_EMAIL")  # noqa F405
-# Max allowed size (bytes) of an uploaded image file
-IMAGE_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024 * 5  # 5Mb

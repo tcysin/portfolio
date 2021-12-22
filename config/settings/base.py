@@ -152,7 +152,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # CUSTOM
 # -----------------------------------------------------------------------------
+# Max total count of files a user may upload
+FILE_UPLOAD_MAX_COUNT = 100
 # Max allowed size (bytes) of an uploaded image file
-IMAGE_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024 * 10  # 10Mb
+FILE_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024 * 5  # 5Mb
 # Distance threshold for duplicated image detection
 THRESHOLD = 0.16  # cutoff (scaled) Hamming distance between dHashes
