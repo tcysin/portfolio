@@ -1,2 +1,2 @@
-# portfolio
-Source code for personal portfolio webpage.
+# Portfolio website
+Source code for personal portfolio website.
